@@ -16,6 +16,7 @@ The game's graphics and visuals were heavily influenced by the Harry Potter seri
 <p>
   The primary audio track in the game is Hedwig's Theme, which enhances the nostalgic connection to the series. Additional sound effects, such as for jumping and collecting snitches, add depth and liveliness to the gameplay.
 </p>
+
 #### Manual:
 <p>
  The rules are simple:
@@ -28,7 +29,7 @@ The game's graphics and visuals were heavily influenced by the Harry Potter seri
   In addition to the core game mechanics, I’ve added several features to improve the overall user experience:
   + <strong>Mute Option: </strong>sPlayers can toggle the background music on or off, with visual indicators for the current state.
   * <strong>Leaderboard:</strong> The game records and displays the top five scores along with the players' names. To achieve this, I implemented a name input feature at the beginning of the game using the pygame_textinput library.
-  - <strong>Navigation Controls:</strong> A back button allows seamless navigation between screens. This was implemented using a separate Button class in a button.py file.
+  * <strong>Navigation Controls:</strong> A back button allows seamless navigation between screens. This was implemented using a separate Button class in a button.py file.
 While I primarily relied on functions for the project, I used Object-Oriented Programming (OOP) concepts sparingly, mainly for features like the button class. Although incorporating more OOP would have improved the design, my limited knowledge and the simplicity of the game led me to stick with functional programming for most parts.
 </p>
 
