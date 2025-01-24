@@ -20,8 +20,8 @@ The game's graphics and visuals were heavily influenced by the Harry Potter seri
 #### Manual:
 <p>
  The rules are simple:
-  + Harry, the main character, must outrun Voldemort and dodge flying owls.
-  - Along the way, players can collect Golden Snitches scattered across different levels.
+  * Harry, the main character, must outrun Voldemort and dodge flying owls.
+  + Along the way, players can collect Golden Snitches scattered across different levels.
 </p>
 
 #### Features:
@@ -39,9 +39,9 @@ While I primarily relied on functions for the project, I used Object-Oriented Pr
 
 There were moments when I considered leaving the project at its basic stage, but seeing the game evolve motivated me to persevere. Here are some specific challenges I encountered:
 
-+ <strong>Thematic Consistency: </strong>Deciding whether to stick to a Harry Potter theme was tough due to the difficulty of sourcing non-copyrighted graphics.
+* <strong>Thematic Consistency: </strong>Deciding whether to stick to a Harry Potter theme was tough due to the difficulty of sourcing non-copyrighted graphics.
 * <strong>Leaderboard Functionality:</strong> Implementing user input and managing the leaderboard with JSON files required learning additional concepts beyond what I knew from CS50P. Debugging these elements was particularly challenging.
-- <strong>Large Codebase:</strong> Writing, executing, and debugging a project of this scale was a new and overwhelming experience for me.
+* <strong>Large Codebase:</strong> Writing, executing, and debugging a project of this scale was a new and overwhelming experience for me.
 Despite these hurdles, the process of building the game was incredibly rewarding and a significant learning experience.
 </p>
 
