@@ -25,9 +25,9 @@ The rules are simple:
 #### Features:
 <p>
   In addition to the core game mechanics, I’ve added several features to improve the overall user experience:
-  + Mute Option: Players can toggle the background music on or off, with visual indicators for the current state.
-  + Leaderboard: The game records and displays the top five scores along with the players' names. To achieve this, I implemented a name input feature at the beginning of the game using the pygame_textinput            library.
-  + Navigation Controls: A back button allows seamless navigation between screens. This was implemented using a separate Button class in a button.py file.
+- Mute Option: Players can toggle the background music on or off, with visual indicators for the current state.
+- Leaderboard: The game records and displays the top five scores along with the players' names. To achieve this, I implemented a name input feature at the beginning of the game using the pygame_textinput library.
+- Navigation Controls: A back button allows seamless navigation between screens. This was implemented using a separate Button class in a button.py file.
 
 While I primarily relied on functions for the project, I used Object-Oriented Programming (OOP) concepts sparingly, mainly for features like the button class. Although incorporating more OOP would have improved the design, my limited knowledge and the simplicity of the game led me to stick with functional programming for most parts.
 
