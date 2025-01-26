@@ -14,25 +14,25 @@ pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
-test_font = pygame.font.Font('hello/Daily Bubble.ttf', 50)
+test_font = pygame.font.Font('images/hello/Daily Bubble.ttf', 50)
 
 # Load Assets
-BG = pygame.image.load("hello/Background.png")
-sky_surface = pygame.image.load('hello/castle.png')#regular surface
-ground_surface = pygame.image.load('hello/ground.png').convert()
+BG = pygame.image.load("images/hello/Background.png")
+sky_surface = pygame.image.load('images/hello/castle.png')#regular surface
+ground_surface = pygame.image.load('images/hello/ground.png').convert()
 
-voldy_surf1 = pygame.transform.rotozoom(pygame.image.load('hello/voldy1.png').convert_alpha(),0,0.20)
+voldy_surf1 = pygame.transform.rotozoom(pygame.image.load('images/hello/voldy1.png').convert_alpha(),0,0.20)
 voldy_surf1 = pygame.transform.flip(voldy_surf1,True,False)
-voldy_surf2= pygame.transform.rotozoom(pygame.image.load('hello/voldy2.png').convert_alpha(),0,0.20)
+voldy_surf2= pygame.transform.rotozoom(pygame.image.load('images/hello/voldy2.png').convert_alpha(),0,0.20)
 voldy_surf2 = pygame.transform.flip(voldy_surf2,True,False)
 voldy_frames = [voldy_surf1,voldy_surf2]
 voldy_index = 0
 voldy_surf = voldy_frames[voldy_index]
 
-owl_surf1 = pygame.image.load('hello/fly1.png').convert_alpha()
+owl_surf1 = pygame.image.load('images/hello/fly1.png').convert_alpha()
 owl_surf1 = pygame.transform.rotozoom(owl_surf1, 0, 0.18)
 owl_surf1 = pygame.transform.flip(owl_surf1,True, False)
-owl_surf2 = pygame.image.load('hello/fly2.png').convert_alpha()
+owl_surf2 = pygame.image.load('images/hello/fly2.png').convert_alpha()
 owl_surf2 = pygame.transform.rotozoom(owl_surf2, 0, 0.18)
 owl_surf2 = pygame.transform.flip(owl_surf2,True, False) 
 owl_frames = [owl_surf1,owl_surf2]
@@ -41,28 +41,28 @@ owl_surf = owl_frames[owl_index]
 
 
 player_index = 0
-player_walk1 = pygame.transform.rotozoom(pygame.image.load('hello/walk1.png').convert_alpha(),0,0.20)
-player_walk2 = pygame.transform.rotozoom(pygame.image.load('hello/walk2.png').convert_alpha(),0,0.20)
-player_walk3 = pygame.transform.rotozoom(pygame.image.load('hello/walk3.png').convert_alpha(),0,0.20)
+player_walk1 = pygame.transform.rotozoom(pygame.image.load('images/hello/walk1.png').convert_alpha(),0,0.20)
+player_walk2 = pygame.transform.rotozoom(pygame.image.load('images/hello/walk2.png').convert_alpha(),0,0.20)
+player_walk3 = pygame.transform.rotozoom(pygame.image.load('images/hello/walk3.png').convert_alpha(),0,0.20)
 player_walk = [player_walk1,player_walk2,player_walk3]
-player_jump = pygame.transform.rotozoom(pygame.image.load('hello/jump.png').convert_alpha(),0,0.20)
+player_jump = pygame.transform.rotozoom(pygame.image.load('images/hello/jump.png').convert_alpha(),0,0.20)
 player_rect = player_walk[player_index].get_rect(midbottom = (150,320))
 
 #sound
 
 music = True
-jump_sound = pygame.mixer.Sound('hello/jump_sound.mp3')
+jump_sound = pygame.mixer.Sound('images/hello/jump_sound.mp3')
 jump_sound.set_volume(0.3)
-coin_sound = pygame.mixer.Sound('hello/coin.mp3')
+coin_sound = pygame.mixer.Sound('images/hello/coin.mp3')
 coin_sound.set_volume(0.5)
-theme_sound = pygame.mixer.Sound('hello/theme.mp3')
+theme_sound = pygame.mixer.Sound('images/hello/theme.mp3')
 theme_sound.set_volume(0.5)
 theme_sound.play(loops = -1)
 #coins
-coin_surf = pygame.image.load('hello/coin.png').convert_alpha()
+coin_surf = pygame.image.load('images/hello/coin.png').convert_alpha()
 coin_surf = pygame.transform.rotozoom(coin_surf, 0, 0.1)
 # Intro Screen
-intro = pygame.image.load('hello/villian.png').convert_alpha()
+intro = pygame.image.load('images/hello/villian.png').convert_alpha()
 intro = pygame.transform.rotozoom(intro, 0, 0.7)
 intro_rect = intro.get_rect(center = (400,150))
 game_message = test_font.render(f'Press space to start', False , 'White')
@@ -94,7 +94,7 @@ pygame.time.set_timer(owl_animation_timer, 500)
 
 def get_font(size):
     """Returns a font of the desired size."""
-    return pygame.font.Font("hello/Daily Bubble.ttf", size)
+    return pygame.font.Font("images/hello/Daily Bubble.ttf", size)
 
 
 def display_score():
@@ -374,8 +374,8 @@ def sound():
         back_button.changeColor(options_mouse_pos)
         back_button.update(screen)
 
-        musicon_surface = pygame.image.load('hello/soundon.png').convert_alpha()
-        musicoff_surface = pygame.image.load('hello/soundoff.png').convert_alpha()
+        musicon_surface = pygame.image.load('images/hello/soundon.png').convert_alpha()
+        musicoff_surface = pygame.image.load('images/hello/soundoff.png').convert_alpha()
         sound_surf = [musicon_surface,musicoff_surface]
         if music == True:
             screen.blit(musicon_surface, sound_surf[0].get_rect(center = (400,100)))
@@ -409,11 +409,11 @@ def main_menu():
         menu_rect = menu_text.get_rect(center=(400, 50))
         screen.blit(menu_text, menu_rect)
 
-        play_button = Button(image=pygame.image.load("hello/Play Rect.png"), pos=(400, 150),
+        play_button = Button(image=pygame.image.load("images/hello/Play Rect.png"), pos=(400, 150),
                              text_input="PLAY", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
-        options_button = Button(image=pygame.image.load("hello/Options Rect.png"), pos=(400, 250),
+        options_button = Button(image=pygame.image.load("images/hello/Options Rect.png"), pos=(400, 250),
                                 text_input="LEADERBOARD", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
-        sound_button = Button(image=pygame.image.load("hello/Quit Rect.png"), pos=(400, 350),
+        sound_button = Button(image=pygame.image.load("images/hello/Quit Rect.png"), pos=(400, 350),
                              text_input="MUSIC", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
 
         for button in [play_button, options_button, sound_button]:
