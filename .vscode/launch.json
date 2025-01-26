@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": []
+    {
+        "version": "2.0.0",
+        "tasks": [
+          {
+            "label": "Build and Run C Program",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+              "-o",
+              "program",
+              "program.c",
+              "&&",
+              "./program"
+            ],
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task to compile and run a C program"
+          }
+        ]
+      }
+      
+}
