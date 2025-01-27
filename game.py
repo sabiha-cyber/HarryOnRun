@@ -14,7 +14,7 @@ pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
-test_font = pygame.font.Font('font/Daily Bubble.ttf', 50)
+test_font = pygame.font.Font('font/font.ttf', 50)
 
 # Load Assets
 BG = pygame.image.load("images/Background.png")
@@ -56,7 +56,7 @@ player_rect = player_walk[player_index].get_rect(midbottom = (150,328))
 music = True
 jump_sound = pygame.mixer.Sound('sound/jump_sound.mp3')
 jump_sound.set_volume(0.3)
-coin_sound = pygame.mixer.Sound('sound/coin.mp3')
+coin_sound = pygame.mixer.Sound('sound/coins.mp3')
 coin_sound.set_volume(0.5)
 theme_sound = pygame.mixer.Sound('sound/theme.mp3')
 theme_sound.set_volume(0.5)
@@ -97,7 +97,7 @@ pygame.time.set_timer(owl_animation_timer, 500)
 
 def get_font(size):
     """Returns a font of the desired size."""
-    return pygame.font.Font("font/Daily Bubble.ttf", size)
+    return pygame.font.Font("font/font.ttf", size)
 
 
 def display_score():
