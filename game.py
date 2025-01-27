@@ -24,9 +24,9 @@ main = pygame.image.load("images/main.png")
 sky_surface = pygame.image.load('images/castle.png')#regular surface
 ground_surface = pygame.image.load('images/ground.png').convert()
 
-voldy_surf1 = pygame.transform.rotozoom(pygame.image.load('images/voldy1.png').convert_alpha(),0,0.20)
+voldy_surf1 = pygame.transform.rotozoom(pygame.image.load('images/voldy1.png').convert_alpha(),0,0.18)
 voldy_surf1 = pygame.transform.flip(voldy_surf1,True,False)
-voldy_surf2= pygame.transform.rotozoom(pygame.image.load('images/voldy2.png').convert_alpha(),0,0.20)
+voldy_surf2= pygame.transform.rotozoom(pygame.image.load('images/voldy2.png').convert_alpha(),0,0.18)
 voldy_surf2 = pygame.transform.flip(voldy_surf2,True,False)
 voldy_frames = [voldy_surf1,voldy_surf2]
 voldy_index = 0
@@ -120,7 +120,7 @@ def obstacle_movement(obstacles):
     if obstacles:
         for obstacle_rect in obstacles:
             obstacle_rect.x -= 5
-            if obstacle_rect.bottom == 328:
+            if obstacle_rect.bottom == 325:
                 screen.blit(voldy_surf, obstacle_rect)
             else:
                 screen.blit(owl_surf, obstacle_rect)
@@ -140,12 +140,11 @@ def coins_movement(coins):
 def collision(player, obstacle):
     if obstacle:
         for obstacle_rect in obstacle:
-            obstacle_rect_shrunk = obstacle_rect #.inflate(-20, -20)
-            player_shrunk = player #.inflate(-20, -20)
+            obstacle_rect_shrunk = obstacle_rect#.inflate(-20, -20)
+            player_shrunk = player#.inflate(-20, -20)
             if player_shrunk.colliderect(obstacle_rect_shrunk):
                 return False
     return True
-
 
 def coin_collision(player, coin_list):
     global coins  
@@ -176,13 +175,10 @@ def load_leaderboard():
     except (FileNotFoundError, json.JSONDecodeError):
         leaderboard = []  # If file doesn't exist or is invalid, initialize as empty list
 
-
-
 def save_leaderboard():
     """Saves the leaderboard to a file."""
     with open(leaderboard_file, "w") as file:
         json.dump(leaderboard, file)
-
 
 def update_leaderboard(player_name, score):
     """Updates the leaderboard with the player's score."""
@@ -237,8 +233,6 @@ def get_player_name():
 
     return player_name
 
-
-
 def display_leaderboard():
     """Displays the leaderboard."""
     while True:
@@ -266,7 +260,6 @@ def display_leaderboard():
                 return
 
         pygame.display.update()
-
 
 def play():
     """Main gameplay loop."""
@@ -362,8 +355,6 @@ def play():
         pygame.display.update()
         clock.tick(60)
 
-
-
 def sound():
     while True:
         global music
@@ -406,8 +397,7 @@ def sound():
                         theme_sound.play(loops = -1)
 
         pygame.display.update()
-
-    
+ 
 def main_menu():
     """Displays the main menu."""
     while True:
@@ -443,8 +433,6 @@ def main_menu():
                     
 
         pygame.display.update()
-
-
 
 if __name__ == "__main__":
     load_leaderboard()

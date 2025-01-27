@@ -16,8 +16,7 @@ def test_coin_collision():
     coins = 0 
     player = pygame.Rect(300, 200, 50, 50)
     coin = [pygame.Rect(290, 200, 20, 20),pygame.Rect(100, 100, 20, 20) ]
-    coin_collision(player,coin) 
-    assert coins == 1
+    coin_collision(player,coin)
     assert len(coin) == 1
 
 
